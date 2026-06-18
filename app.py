@@ -23,7 +23,6 @@ if "catalogo" not in st.session_state:
             "CAM-ARG86-DIEGO", "Camiseta Argentina 1986 (Maradona)", 
             "Réplica oficial de alta fidelidad de la mítica indumentaria celeste y blanca con el número 10 estampado en la espalda, rememorando el campeonato de México 1986.", 
             "Camiseta", 1986, "Nuevo", 45000.0, 45000.0, 8
-            "https://i.ibb.co/68v0f0j/camiseta-maradona-86.jpg"
         ),
         ProductoMundial(
             "CAM-BRA02-RONY", "Camiseta Brasil 2002 (Ronaldo)", 
