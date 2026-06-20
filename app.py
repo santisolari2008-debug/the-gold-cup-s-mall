@@ -14,89 +14,105 @@ class ProductoMundial:
     precio_base: float
     precio_final: float
     stock: int
+    url_imagen: str
 
-# 2. INICIALIZACIÓN DEL CATÁLOGO DE 15 PRODUCTOS (ESTRUCTURA DE DATOS)
+# 2. INICIALIZACIÓN DEL CATÁLOGO DE 15 PRODUCTOS CON SUS URLS ASIGNADAS
 if "catalogo" not in st.session_state:
     st.session_state.catalogo = [
         # --- CATEGORÍA: CAMISETAS (5 productos) ---
         ProductoMundial(
             "CAM-ARG86-DIEGO", "Camiseta Argentina 1986 (Maradona)", 
             "Réplica oficial de alta fidelidad de la mítica indumentaria celeste y blanca con el número 10 estampado en la espalda, rememorando el campeonato de México 1986.", 
-            "Camiseta", 1986, "Nuevo", 45000.0, 45000.0, 8
+            "Camiseta", 1986, "Nuevo", 45000.0, 45000.0, 8,
+            "https://acdn-us.mitiendanube.com/stores/001/312/744/products/retro_argenina_1024x1024_85e17b49-6096-4c6d-ae8e-cc1d0bba29cc1-1fc7f6c52de9b7270816264737777382-640-0.webp"
         ),
         ProductoMundial(
             "CAM-BRA02-RONY", "Camiseta Brasil 2002 (Ronaldo)", 
             "Prenda original de la selección brasileña pentacampeona de Corea-Japón 2002. Modelo de utilería de época.", 
-            "Camiseta", 2002, "Usado", 35000.0, 24500.0, 2
+            "Camiseta", 2002, "Usado", 35000.0, 24500.0, 2,
+            "https://acdn-us.mitiendanube.com/stores/001/312/744/products/thumb-878ee8f43a002fa06e17166753595191-640-0.webp"
         ),
         ProductoMundial(
             "CAM-ITA90-VINT", "Camiseta Italia 1990 Local", 
             "Indumentaria clásica de la escuadra 'Azzurra' para el mundial de Italia 90. Tejido y cuello vintage impecable.", 
-            "Camiseta", 1990, "Nuevo", 52000.0, 52000.0, 4
+            "Camiseta", 1990, "Nuevo", 52000.0, 52000.0, 4,
+            "https://acdn-us.mitiendanube.com/stores/001/312/744/products/wraetsretreyty-8dab9cfc82b4ca961316977526773468-480-0.webp"
         ),
         ProductoMundial(
             "CAM-FRA98-ZIZOU", "Camiseta Francia 1998 (Zidane)", 
             "Modelo titular utilizado por la selección campeona del mundo. Edición conmemorativa con bordados originales.", 
-            "Camiseta", 1998, "Nuevo", 48000.0, 48000.0, 5
+            "Camiseta", 1998, "Nuevo", 48000.0, 48000.0, 5,
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVOYzbeIR_r3eeHhB0ovsEC7FGl0IJ60m7hkDHeeHoLA&s=10"
         ),
         ProductoMundial(
             "CAM-GER14-FINAL", "Camiseta Alemania 2014 Visitante", 
             "Modelo alternativo negro y rojo utilizado en la recordada campaña del campeonato en Brasil 2014.", 
-            "Camiseta", 2014, "Usado", 38000.0, 26600.0, 1
+            "Camiseta", 2014, "Usado", 38000.0, 26600.0, 1,
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkstvJtFTS4TxcaivO9Dr97zsDQdQNWtXOqLotag8NyErEnAFLLq1bwHXP&s=10"
         ),
 
         # --- CATEGORÍA: FIGURITAS / ÁLBUMES (5 productos) ---
         ProductoMundial(
             "ALB-GER06-COMP", "Album Alemania 2006 Completo", 
             "Álbum oficial Panini de la Copa del Mundo Alemania 2006. Contiene la totalidad de los stickers adheridos de forma simétrica.", 
-            "Figurita/Álbum", 2006, "Usado", 80000.0, 56000.0, 1
+            "Figurita/Álbum", 2006, "Usado", 80000.0, 56000.0, 1,
+            "https://www.lacasadelasfiguritas.com/cdn/shop/files/rn-image_picker_lib_temp_2d3e184e-68bd-451b-a2a0-cabdaa7fbc0f.jpg?v=1772855622&width=2048"
         ),
         ProductoMundial(
             "FIG-QAT22-MESSI", "Figurita Lionel Messi Legend Gold", 
             "Sticker especial Extra Gold de Panini correspondiente al Mundial de Qatar 2022. Una de las piezas modernas más valuadas.", 
-            "Figurita/Álbum", 2022, "Nuevo", 25000.0, 25000.0, 3
+            "Figurita/Álbum", 2022, "Nuevo", 25000.0, 25000.0, 3,
+            "https://media.tycsports.com/files/2022/08/25/469726/figurita-messi-legend-golden_862x485.webp"
         ),
         ProductoMundial(
             "ALB-MEX86-RETRO", "Album Mexico 1986 Reimpresion", 
             "Edición de alta fidelidad conmemorativa del álbum de figuritas de México 1986. Ideal para repasar la historia.", 
-            "Figurita/Álbum", 1986, "Nuevo", 18000.0, 18000.0, 12
+            "Figurita/Álbum", 1986, "Nuevo", 18000.0, 18000.0, 12,
+            "https://http2.mlstatic.com/D_NQ_NP_675269-MLA52202287799_102022-O.webp"
         ),
         ProductoMundial(
             "FIG-BRA14-NEY", "Figurita Neymar Jr Shiny Edition", 
             "Sticker metalizado brillante de edición limitada correspondiente al mundial de Brasil 2014. Esquinas perfectas.", 
-            "Figurita/Álbum", 2014, "Nuevo", 4500.0, 4500.0, 15
+            "Figurita/Álbum", 2014, "Nuevo", 4500.0, 4500.0, 15,
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0RKFLsbxd03qG5dR4tbmT-1_gVJzPgMdrbzaAU_K4jDj7am6mcolKz6iO&s=10"
         ),
         ProductoMundial(
             "ALB-ITA90-INCOM", "Album Italia 1990 Parcial", 
             "Álbum original de época con el 75% de sus pegatinas coleccionables adheridas correctamente.", 
-            "Figurita/Álbum", 1990, "Usado", 30000.0, 21000.0, 2
+            "Figurita/Álbum", 1990, "Usado", 30000.0, 21000.0, 2,
+            "https://http2.mlstatic.com/D_Q_NP_2X_811970-MLA110151852316_042026-T.webp"
         ),
 
         # --- CATEGORÍA: SOUVENIRS (5 productos) ---
         ProductoMundial(
             "VU-RSA10-ZUMI", "Vuvuzela Sudafrica 2010 Oficial", 
             "Instrumento de viento plástico tradicional en el representativo color amarillo de la icónica Copa de Sudáfrica.", 
-            "Souvenir", 2010, "Nuevo", 6000.0, 6000.0, 20
+            "Souvenir", 2010, "Nuevo", 6000.0, 6000.0, 20,
+            "https://d3dkjx001zrum8.cloudfront.net/d714e358-4db1-45ae-92ee-81734fa50a1b/download_medium/c6e2d13a0ed0d229d32d5369f839663a.jpeg"
         ),
         ProductoMundial(
             "BUF-FRA98-CHAMP", "Bufanda Francia 1998 Final", 
             "Bufanda conmemorativa de hilo oficial del partido definitorio celebrado entre el seleccionado local y Brasil.", 
-            "Souvenir", 1998, "Usado", 12000.0, 8400.0, 3
+            "Souvenir", 1998, "Usado", 12000.0, 8400.0, 3,
+            "https://http2.mlstatic.com/D_NQ_NP_969230-MLA43541788045_092020-O.webp"
         ),
         ProductoMundial(
             "PEL-QAT22-RIHLA", "Pelota Al Rihla Official Match Ball", 
             "Balón oficial de juego de la Copa Mundial de la FIFA Qatar 2022 en su empaque de presentación original.", 
-            "Souvenir", 2022, "Nuevo", 65000.0, 65000.0, 6
+            "Souvenir", 2022, "Nuevo", 65000.0, 65000.0, 6,
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHEKXbo-UX92UgwEyDjWgTvzlQLN5x08WDJDpxNyPjZbr0WzDkRoIoPKhC&s=10"
         ),
         ProductoMundial(
             "TICK-ARG78-FINAL", "Entrada Original Final Argentina 1978", 
             "Pase físico original de tribuna para el partido definitorio disputado en el Estadio Monumental en el año 1978.", 
-            "Souvenir", 1978, "Usado", 95000.0, 66500.0, 1
+            "Souvenir", 1978, "Usado", 95000.0, 66500.0, 1,
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPXkOzTLFayjVL4qMCCpCnjqxVIRwVNooHnwmP3ahj5A&s=10"
         ),
         ProductoMundial(
             "MED-USA94-REPLI", "Replica Medalla de Campeon USA 1994", 
             "Reproducción oficial a escala real con su cinta respectiva de la medalla de la Copa del Mundo otorgada en 1994.", 
-            "Souvenir", 1994, "Nuevo", 15000.0, 15000.0, 10
+            "Souvenir", 1994, "Nuevo", 15000.0, 15000.0, 10,
+            "https://images.auctionet.com/thumbs/large_item_4712753_8944ea77ba.jpg"
         )
     ]
 
@@ -172,12 +188,15 @@ with tab_catalogo:
         if coincide_busqueda and coincide_cat and coincide_cond:
             productos_filtrados.append(prod)
 
-    # Renderizado del catálogo estructurado
+    # Renderizado del catálogo estructurado con imágenes asignadas
     if productos_filtrados:
         for p in productos_filtrados:
             st.markdown('<div class="product-card">', unsafe_allow_html=True)
-            c_desc, c_precio, c_accion = st.columns([5, 2, 1])
+            # Distribución ordenada: Imagen, Descripción, Precio, Acción
+            c_img, c_desc, c_precio, c_accion = st.columns([1.5, 4, 2, 1])
             
+            with c_img:
+                st.image(p.url_imagen, use_container_width=True)
             with c_desc:
                 st.markdown(f"#### {p.nombre} ({p.anio_mundial})")
                 st.caption(f"Código SKU: {p.codigo_sku}  |  Categoría: {p.categoria}  |  Estado: {p.condicion}")
